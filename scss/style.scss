@@ -1,0 +1,225 @@
+@import "layout.scss";
+@import "normalize.scss";
+@import url('https://fonts.googleapis.com/css?family=Lato:400,500');
+
+body{
+	background: #45A173;
+}
+
+/* Layout */
+.ba-container{
+	padding-left: 20px;
+	padding-right: 20px;
+	max-width: 1200px;
+}
+
+/* Typography */
+a,
+input[type="submit"],
+input[type="button"],
+button{
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button{
+	display: inline-block;
+	&:hover {
+
+	}
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	&:focus {
+
+	}
+}
+.red {
+	color: #c0392b;
+}
+
+.ba-intro {
+	text-align: center;
+	background: #3c3c3c;
+	padding: 20px;
+	&__title {
+		margin: 0;
+		color: #fff;
+	}
+}
+.ba-desk {
+	padding: 60px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: flex-start;
+}
+.ba-card {
+	width: 20%;
+	height: 298px;
+	background: #fff;
+	position: relative;
+	border-radius: 10px;
+	box-shadow: 2px 2px 6px 0 #000;
+	margin: 0 10px 30px;
+	backface-visibility: hidden;
+	transition: transform .5s ease-in-out;
+	z-index: 2;
+	&:hover {
+		cursor: pointer;
+		transform: rotateY(-180deg);
+	}
+	&__back {
+		background: #ccc url(../img/back.jpg) 50% 50% /cover;
+		border-radius: 10px;
+		transform: rotateY(-180deg);
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		backface-visibility: hidden;
+		&:hover {
+			transform: rotateY(0deg);
+		}
+	}
+  	&__spades {
+    	color: #0c152d;
+    	font-size: 30px;
+    	position: absolute;
+    	padding: 5px 5px 25px;
+    	top: 10px;
+    	left: 5px;
+    	background: url(../img/clubs.png) no-repeat 50% 100%;
+  }
+  	&__spades-rotate {
+    	color: #0c152d;
+    	font-size: 30px;
+    	position: absolute;
+    	bottom: 10px;
+    	right: 5px;
+   	 	padding: 5px 5px 25px;
+    	background: url(../img/clubs.png) no-repeat 50% 100%;
+    	transform: rotate(180deg);
+  }
+	&__hearts {
+		color: #c0392b;
+		font-size: 30px;
+		position: absolute;
+		padding: 5px 5px 25px;
+		top: 10px;
+		left: 5px;
+		background: url(../img/hearts.png) no-repeat 50% 100%;
+	}
+	&__hearts-rotate {
+		color: #c0392b;
+		font-size: 30px;
+		position: absolute;
+		bottom: 10px;
+		right: 5px;
+		padding: 5px 5px 25px;
+		background: url(../img/hearts.png) no-repeat 50% 100%;
+		transform: rotate(180deg);
+	}
+	&__clubs {
+		color: #0c152d;
+		font-size: 30px;
+		position: absolute;
+		padding: 5px 5px 25px;
+		top: 10px;
+		left: 5px;
+		background: url(../img/clubs.png) no-repeat 50% 100%;
+	}
+	&__clubs-rotate {
+		color: #0c152d;
+		font-size: 30px;
+		position: absolute;
+		bottom: 10px;
+		right: 5px;
+		padding: 5px 5px 25px;
+		background: url(../img/clubs.png) no-repeat 50% 100%;
+		transform: rotate(180deg);
+	}
+	&__diamonds {
+		color: #c0392b;
+		font-size: 30px;
+		position: absolute;
+		padding: 5px 5px 25px;
+		top: 10px;
+		left: 5px;
+		background: url(../img/diamonds.png) no-repeat 50% 100%;
+	}
+	&__diamonds-rotate {
+		color: #c0392b;
+		font-size: 30px;
+		position: absolute;
+		bottom: 10px;
+		right: 5px;
+		padding: 5px 5px 25px;
+		background: url(../img/diamonds.png) no-repeat 50% 100%;
+		transform: rotate(180deg);
+	}
+	&__spades {
+		color: #0c152d;
+		font-size: 30px;
+		position: absolute;
+		padding: 5px 5px 25px;
+		top: 10px;
+		left: 5px;
+		background: url(../img/spades.png) no-repeat 50% 100%;
+	}
+	&__spades-rotate {
+		color: #0c152d;
+		font-size: 30px;
+		position: absolute;
+		bottom: 10px;
+		right: 5px;
+		padding: 5px 5px 25px;
+		background: url(../img/spades.png) no-repeat 50% 100%;
+		transform: rotate(180deg);
+	}
+}
+.ba-card-body {
+	padding: 30px 30px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	position: relative;
+	height: 100%;
+	& img {
+		padding: 15px 5px;
+	}
+	&__top {
+		position: absolute;
+		top: 35%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	&__center {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-size: 50px;
+	}
+	&__bottom {
+		position: absolute;
+		bottom: 15%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	&--small {
+		padding-top: 35px;
+		& img {
+			padding: 5px 5px;
+		}
+	}
+}
